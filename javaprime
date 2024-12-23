@@ -1,0 +1,37 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class ExampleFrame {
+    public static void main(String[] args) {
+        // إنشاء الإطار الأساسي
+        JFrame frame = new JFrame("مثال على نافذة في Java");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+
+        // إعداد لوحة لتنسيق العناصر
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        // إضافة زر في الأعلى
+        JButton button1 = new JButton("زر 1");
+        panel.add(button1, BorderLayout.NORTH);
+
+        // إضافة زر في الأسفل
+        JButton button2 = new JButton("زر 2");
+        panel.add(button2, BorderLayout.SOUTH);
+
+        // إضافة نص في الوسط
+        JLabel label = new JLabel("مرحباً بكم في تطبيق Java!");
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(label, BorderLayout.CENTER);
+
+        // تغيير لون خلفية اللوحة
+        panel.setBackground(Color.CYAN);
+
+        // إضافة اللوحة إلى الإطار
+        frame.add(panel);
+
+        // جعل النافذة مرئية
+        frame.setVisible(true);
+    }
+}
